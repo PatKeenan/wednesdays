@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "private": true,
+  "dependencies": {
+    "@hono/node-server": "^1.12.2",
+    "hono": "^4.5.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsconfigs": "*",
+    "tsx": "^4.7.1"
+  }
+}
