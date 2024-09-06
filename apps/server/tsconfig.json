@@ -1,13 +1,14 @@
 {
-  "extends": "tsconfigs/internal-package.json",
+  "extends": ["tsconfigs/internal-package.json"],
   "compilerOptions": {
+    "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "~/*": ["*"]
+      "~/*": ["./*"]
     }
   },
-  "include": ["./src"],
+  "include": ["./**/*.ts", "./**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

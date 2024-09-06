@@ -6,7 +6,6 @@
     "tooling/*"
   ],
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "api": "yarn workspace api",
     "server": "yarn workspace server",

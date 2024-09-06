@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./src",
-    "types": ["nativewind/types"],
+    "types": ["nativewind/types", "node"],
     "paths": {
       "~/*": ["*"]
     }
