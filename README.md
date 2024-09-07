@@ -5,12 +5,12 @@
 Tee up your social golfing experience with Wednesdays - the ultimate app for golf enthusiasts who love to hit the links with friends!
 Wednesdays transforms your casual golf outings into unforgettable social experiences:
 
-Create your own exclusive golf club or join existing ones
-Personalize your club's dashboard with custom branding
-Track rounds and scores effortlessly
-Compete on dynamic leaderboards
-Spice up your games with customizable game modes
-Receive expert advice from our AI caddy
+- Create your own exclusive golf club or join existing ones
+- Personalize your club's dashboard with custom branding
+- Track rounds and scores effortlessly
+- Compete on dynamic leaderboards
+- Spice up your games with customizable game modes
+- Receive expert advice from our AI caddy
 
 Whether you're a weekend warrior or a seasoned pro, Wednesdays helps you connect with fellow golf lovers, improve your game, and add a dash of friendly competition to every round. Our intuitive interface makes organizing golf outings a breeze, while robust tracking features let you monitor your progress over time.
 With Wednesdays, every golf day feels like the best day of the week. Download now and elevate your golfing journey!
