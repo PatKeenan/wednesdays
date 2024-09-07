@@ -20,7 +20,7 @@ With Wednesdays, every golf day feels like the best day of the week. Download no
 ### Overview
 
 I used Anthropic to create that description...
-This project is built with purely typescript on the frontend and backend. The project is organized using yarn workspaces with the server and mobile app living in the `./apps` directory while all project specific tooling resides in the `./tooling` directory.
+This project is version 2 of a [previous project](https://github.com/PatKeenan/wednesday) which was just a PWA. After testing on the course with my friends, I was able to get enough info to start version 2. Version 2 will still include the PWA but it will primarily a mobile app using React Native. This project, like the last one, is built purely with typescript on the frontend and backend. The project is organized using yarn workspaces with the server and mobile app living in the `./apps` directory while all project specific tooling resides in the `./tooling` directory.
 
 ### Technology
 
