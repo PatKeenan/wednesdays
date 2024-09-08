@@ -9,6 +9,6 @@
       "~/*": ["./*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

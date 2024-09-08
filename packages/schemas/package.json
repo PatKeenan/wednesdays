@@ -1,5 +1,6 @@
 {
-  "name": "server",
+  "name": "schemas",
+  "private": true,
   "version": "1.0.0",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -15,22 +16,17 @@
     }
   },
   "scripts": {
-    "dev": "tsx watch src/app.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "pkgroll",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hono/node-server": "^1.12.2",
-    "@hono/zod-validator": "^0.2.2",
-    "hono": "^4.5.11",
-    "zod": "catalog:",
-    "schemas": "workspace:*"
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
     "tsconfigs": "workspace:*",
     "tsx": "catalog:",
+    "typescript": "catalog:",
     "pkgroll": "catalog:"
-  },
-  "private": true
+  }
 }

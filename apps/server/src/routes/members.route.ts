@@ -11,6 +11,9 @@ export const membersRoute = new Hono()
   .get("/", (c) => {
     return c.json(fakeMembers);
   })
+  .get("/get-all", (c) => {
+    return c.json(fakeMembers);
+  })
   .get("/:id{[0-9]+}", (c) => {
     const id = Number.parseInt(c.req.param("id"));
     const member = fakeMembers.find((m) => m.id === id);

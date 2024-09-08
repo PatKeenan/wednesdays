@@ -1,10 +1,15 @@
 {
   "name": "wednesdays",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "server:dev": "pnpm --filter server dev",
-    "expo:dev": "pnpm --filter expo dev"
+    "expo:dev": "pnpm --filter expo dev",
+    "schemas:dev": "pnpm --filter schemas dev",
+    "server:build": "pnpm --filter server build",
+    "schemas:build": "pnpm --filter schemas build",
+    "server:typecheck": "pnpm --filter server typecheck",
+    "schemas:typecheck": "pnpm --filter schemas typecheck"
   },
-  "packageManager": "pnpm@9.7.1",
-  "private": true
+  "packageManager": "pnpm@9.7.1"
 }

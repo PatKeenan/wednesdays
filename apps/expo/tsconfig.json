@@ -3,11 +3,13 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./src",
+    "jsx": "react-native",
     "types": ["nativewind/types", "node"],
+    "allowSyntheticDefaultImports": true,
     "paths": {
-      "~/*": ["*"],
-      "server/*": ["../../server/src/*"]
-    }
+      "~/*": ["*"]
+    },
+    "checkJs": false
   },
   "include": [
     "./**/*.ts",
