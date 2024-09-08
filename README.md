@@ -26,7 +26,6 @@ This project is version 2 of a [previous project](https://github.com/PatKeenan/w
 
 - pnpm workspaces
 - [Hono](https://hono.dev/) for the api
-- [Hono RPC](https://hono.dev//docs/guides/rpc) and [Hono Client](https://hono.dev/docs/guides/rpc#client) for end-to-end type-safety
 - React Native (using expo) for the mobile app
 - [Nativewind](https://www.nativewind.dev/v4/overview) for styling
 - [React Native Reusables](https://rnr-docs.vercel.app/getting-started/introduction/) for the UI (shadcn for react-native)
