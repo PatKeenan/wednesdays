@@ -3,4 +3,6 @@ node_modules
 .env
 dist
 .dist
-.yarn/install-state.gz
+.yarn/
+!.yarn/releases
+.vscode/*

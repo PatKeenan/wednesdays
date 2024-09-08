@@ -24,7 +24,7 @@ This project is version 2 of a [previous project](https://github.com/PatKeenan/w
 
 ### Technology
 
-- yarn workspaces (yarn 4)
+- pnpm workspaces
 - [Hono](https://hono.dev/) for the api
 - [Hono RPC](https://hono.dev//docs/guides/rpc) and [Hono Client](https://hono.dev/docs/guides/rpc#client) for end-to-end type-safety
 - React Native (using expo) for the mobile app

@@ -1,15 +1,10 @@
 {
   "name": "wednesdays",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "tooling/*"
-  ],
   "version": "1.0.0",
   "scripts": {
-    "api": "yarn workspace api",
-    "server": "yarn workspace server",
-    "expo": "yarn workspace expo"
+    "server:dev": "pnpm --filter server dev",
+    "expo:dev": "pnpm --filter expo dev"
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "pnpm@9.7.1",
+  "private": true
 }

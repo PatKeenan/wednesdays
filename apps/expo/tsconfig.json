@@ -5,7 +5,8 @@
     "baseUrl": "./src",
     "types": ["nativewind/types", "node"],
     "paths": {
-      "~/*": ["*"]
+      "~/*": ["*"],
+      "server/*": ["../../server/src/*"]
     }
   },
   "include": [

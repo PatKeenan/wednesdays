@@ -1,8 +1,9 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { logger } from "hono/logger";
+import { hc } from "hono/client";
 
-import { membersRoute } from "~/routes/members";
+import { membersRoute } from "~/routes/members.route";
 
 const app = new Hono();
 app.use(logger());
@@ -11,7 +12,9 @@ app.get("/", (c) => {
   return c.text("Hello World");
 });
 
-app.route("/members", membersRoute);
+const apiRoutes = app.basePath("/api").route("/members", membersRoute);
+
+export type AppType = typeof apiRoutes;
 
 console.log("Server is running on http://localhost:4001");
 
