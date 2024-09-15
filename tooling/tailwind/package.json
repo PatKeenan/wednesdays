@@ -1,0 +1,23 @@
+{
+  "name": "project-tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "./base-theme.css",
+    "./base-config.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "pnpm build --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "catalog:",
+    "tailwind-merge": "catalog:",
+    "tailwindcss-animate": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "tsconfigs": "workspace:*"
+  }
+}

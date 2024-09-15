@@ -7,8 +7,9 @@ const projectRoot = __dirname;
 // This can be replaced with `find-yarn-workspace-root`
 const monorepoRoot = path.resolve(projectRoot, "../..");
 
+const baseThemePath = `${monorepoRoot}/tooling/tailwind/base-theme.css`;
 const config = withNativeWind(getDefaultConfig(projectRoot), {
-  input: "./global.css",
+  input: baseThemePath,
 });
 
 // 1. Watch all files within the monorepo
