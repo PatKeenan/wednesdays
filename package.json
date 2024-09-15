@@ -5,6 +5,7 @@
   "scripts": {
     "server:dev": "pnpm --filter server dev",
     "expo:dev": "pnpm --filter expo dev",
+    "landing:dev": "pnpm --filter web-landing dev",
     "schemas:dev": "pnpm --filter schemas dev",
     "server:build": "pnpm --filter server build",
     "schemas:build": "pnpm --filter schemas build",

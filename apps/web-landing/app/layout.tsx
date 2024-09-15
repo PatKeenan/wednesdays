@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "project-tailwind/base-theme.css";
 import "./globals.css";
+import { CSPostHogProvider } from "@/components/PostHogProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <CSPostHogProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
+        >
+          {children}
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
