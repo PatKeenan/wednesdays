@@ -10,7 +10,8 @@
     "server:build": "pnpm --filter server build",
     "schemas:build": "pnpm --filter schemas build",
     "server:typecheck": "pnpm --filter server typecheck",
-    "schemas:typecheck": "pnpm --filter schemas typecheck"
+    "schemas:typecheck": "pnpm --filter schemas typecheck",
+    "landing:db:migrate": "pnpm --filter web-landing drizzle-kit generate && pnpm --filter web-landing drizzle-kit migrate"
   },
   "packageManager": "pnpm@9.7.1"
 }

@@ -7,19 +7,85 @@ import { Label } from "@/components/ui/label";
 import { Users, Trophy, Cpu, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { z } from "zod";
+import { useRouter } from "next/navigation";
+
+const schema = z.object({
+  email: z.string().email(),
+});
 
 export function LandingPage() {
   const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const {} = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the email to your backend
-    console.log("Email submitted:", email);
-    // Reset the email input
-    setEmail("");
-    // Show a success message (you might want to use a toast notification here)
-    alert("Thanks for signing up! We'll keep you updated on our launch.");
+
+    const result = schema.safeParse({ email });
+
+    if (!result.success) {
+      setError(result.error.message);
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/sign-up", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        setError("Failed to sign up");
+        setIsLoading(false);
+        setSuccess(false);
+        return;
+      }
+
+      const data = await response.json();
+
+      if (data && "error" in data) {
+        alert(data.error);
+        setIsLoading(false);
+        setSuccess(false);
+        setEmail("");
+      } else {
+        // Reset the email input
+        setEmail("");
+        setSuccess(true);
+        setError(null);
+      }
+    } catch (error) {
+      setError("Failed to sign up");
+      setSuccess(false);
+      setEmail("");
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+  /* const handleShare = () => {
+    const shareData = {
+      title: "Wednesdays Golf App",
+      text: "Check out Wednesdays Golf App!",
+      url: "https://wednesdays.golf",
+    };
+    if (typeof window !== "undefined") {
+      const navigator = window.navigator;
+      if (navigator?.canShare(shareData)) {
+        navigator.share(shareData);
+      } else {
+        console.log("Cannot share");
+      }
+    }
+  }; */
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -55,24 +121,45 @@ export function LandingPage() {
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
                   Wednesdays transforms your casual golf outings into
-                  unforgettable social experiences. Coming Spring 2024!
+                  unforgettable social experiences. Coming Spring 2025!
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form onSubmit={handleSubmit} className="flex space-x-2">
-                  <Input
-                    className="max-w-lg flex-1 bg-white"
-                    placeholder="Enter your email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Button type="submit">Get Notified</Button>
-                </form>
-                <p className="text-xs text-gray-500">
-                  Be the first to know when we launch. No spam, we promise!
-                </p>
+                {success ? (
+                  <div className="flex flex-col items-center p-8 bg-white rounded-lg shadow-lg gap-4">
+                    <p className="text-green-800">
+                      Thanks for signing up! We&apos;ll keep you updated on our
+                      launch!
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <form onSubmit={handleSubmit} className="flex space-x-2">
+                      <Label htmlFor="email" className="sr-only">
+                        Email
+                      </Label>
+                      <Input
+                        className="max-w-lg flex-1 bg-white"
+                        placeholder="Enter your email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                      <Button type="submit" disabled={isLoading || success}>
+                        {isLoading ? "Loading..." : "Get Notified"}
+                      </Button>
+                    </form>
+                    {error ? (
+                      <p className="text-xs text-red-500">{error}</p>
+                    ) : (
+                      <p className="text-xs text-gray-500">
+                        Be the first to know when we launch. No spam, we
+                        promise!
+                      </p>
+                    )}
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -193,25 +280,44 @@ export function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col space-y-2"
-                >
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    placeholder="Enter your email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Button type="submit">Sign Up for Updates</Button>
-                </form>
-                <p className="text-xs text-gray-500">
-                  By signing up, you agree to our Terms of Service and Privacy
-                  Policy.
-                </p>
+                {success ? (
+                  <div className="flex flex-col items-center p-8 bg-white rounded-lg shadow-lg gap-4">
+                    <p className="text-green-800">
+                      Thanks for signing up! We&apos;ll keep you updated on our
+                      launch!
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="flex flex-col space-y-2"
+                    >
+                      <Label htmlFor="email" className="sr-only">
+                        Email
+                      </Label>
+                      <Input
+                        id="email"
+                        placeholder="Enter your email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                      <Button type="submit" disabled={isLoading || success}>
+                        {isLoading ? "Loading..." : "Sign Up for Updates"}
+                      </Button>
+                    </form>
+                    {error ? (
+                      <p className="text-xs text-red-500">{error}</p>
+                    ) : (
+                      <p className="text-xs text-gray-500">
+                        By signing up, you agree to our Terms of Service and
+                        Privacy Policy.
+                      </p>
+                    )}
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -219,7 +325,7 @@ export function LandingPage() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500">
-          © 2023 Wednesdays Golf App. All rights reserved.
+          © 2024 Wednesdays Golf App. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
