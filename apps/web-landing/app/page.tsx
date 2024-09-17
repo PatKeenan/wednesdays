@@ -1,3 +1,5 @@
+"use client";
+
 import { LandingPage } from "@/components/landing-page";
 import { LandingPage2 } from "@/components/landing-page-2";
 
