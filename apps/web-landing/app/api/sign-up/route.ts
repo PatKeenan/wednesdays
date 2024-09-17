@@ -7,6 +7,7 @@ import { eq } from "drizzle-orm";
 
 const emailSchema = z.object({
   email: z.string().email(),
+  version: z.string().optional(),
 });
 
 export async function POST(req: Request) {
@@ -29,7 +30,11 @@ export async function POST(req: Request) {
 
   await db
     .insert(contact)
-    .values({ email: data.email, signup_version: 1, id: uuidv4() })
+    .values({
+      email: data.email,
+      signup_version: data?.version ?? 1,
+      id: uuidv4(),
+    })
     .returning();
 
   if (!isValid.success) {
