@@ -1,4 +1,5 @@
 # Wednesdays
+<img width="1560" alt="image" src="https://github.com/user-attachments/assets/c34b2e90-eb0f-4288-b13b-430dd13e2c00">
 
 ### About
 
