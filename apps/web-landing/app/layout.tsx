@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "project-tailwind/base-theme.css";
 import "./globals.css";
-import { CSPostHogProvider } from "@/components/PostHogProvider";
+import { CSPostHogProvider } from "@/components/post-hog-provider";
 import Head from "next/head";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,9 +19,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Wednesdays - The Ultimate Social Golfing App",
+  title:
+    "Wednesdays Golf App: Transform Your Golf Game | Join the Waiting List",
   description:
-    "Transform your casual golf outings into unforgettable social experiences with Wednesdays. Create clubs, track scores, compete on leaderboards, and get AI caddy advice.",
+    "Revolutionize your golf experience with Wednesdays Golf App. Play exciting mini-games, compete with friends, and enjoy casual golf like never before. Join the waiting list for our Spring 2025 launch!",
   openGraph: {
     type: "website",
     url: "https://wednesday-golf.com",
@@ -31,9 +34,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const title = "Wednesdays - The Ultimate Social Golfing App";
+  const title =
+    "Wednesdays Golf App: Transform Your Golf Game | Join the Waiting List";
   const description =
-    "Transform your casual golf outings into unforgettable social experiences with Wednesdays. Create clubs, track scores, compete on leaderboards, and get AI caddy advice.";
+    "Revolutionize your golf experience with Wednesdays Golf App. Play exciting mini-games, compete with friends, and enjoy casual golf like never before. Join the waiting list for our Spring 2025 launch!";
   const url = "https://wednesday-golf.com";
   const imageUrl = "https://wednesday-golf.com/wednesday-image.webp";
 
@@ -89,10 +93,12 @@ export default function RootLayout({
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Wednesdays Golf App" />
+
         <meta
           name="keywords"
-          content="golf, social golfing, golf app, golf club, golf scores, AI caddy, golf leaderboard"
+          content="golf app, golf games, social golf, golf mini-games, casual golf, golf technology, fun golf games"
         />
+
         <script type="application/ld+json">
           {`
           {
@@ -108,9 +114,11 @@ export default function RootLayout({
       </Head>
       <CSPostHogProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background flex flex-col min-h-screen`}
         >
-          {children}
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </body>
       </CSPostHogProvider>
     </html>
