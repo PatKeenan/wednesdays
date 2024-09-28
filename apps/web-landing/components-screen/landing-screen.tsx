@@ -113,7 +113,7 @@ export function LandingScreen() {
                   fresh and exciting.
                 </p>
                 <Link
-                  href="/blog/mini-games"
+                  href="/features/mini-games"
                   className="text-green-500 hover:underline mt-2 inline-block"
                 >
                   Learn More
@@ -129,7 +129,7 @@ export function LandingScreen() {
                   updating leaderboards.
                 </p>
                 <Link
-                  href="/blog/leaderboards"
+                  href="/features/leaderboards"
                   className="text-green-500 hover:underline mt-2 inline-block"
                 >
                   Learn More
@@ -145,7 +145,7 @@ export function LandingScreen() {
                   easily.
                 </p>
                 <Link
-                  href="/blog/social-features"
+                  href="/features/social"
                   className="text-green-500 hover:underline mt-2 inline-block"
                 >
                   Learn More
@@ -161,7 +161,7 @@ export function LandingScreen() {
                   through the app.
                 </p>
                 <Link
-                  href="/blog/tee-time-booking"
+                  href="/features/club-houses"
                   className="text-green-500 hover:underline mt-2 inline-block"
                 >
                   Learn More
@@ -190,15 +190,16 @@ export function LandingScreen() {
               </AccordionTrigger>
               <AccordionContent>
                 The Wednesdays Golf App is scheduled to launch in Spring 2025.
-                Join our waiting list to be notified as soon as it's available!
+                Join our waiting list to be notified as soon as it&apos;s
+                available!
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>Is the app free to use?</AccordionTrigger>
               <AccordionContent>
                 The basic version of the app will be free to download and use.
-                We'll also offer a premium subscription with additional features
-                and benefits.
+                We&apos;ll also offer a premium subscription with additional
+                features and benefits.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -216,8 +217,8 @@ export function LandingScreen() {
                 What devices will the app be available on?
               </AccordionTrigger>
               <AccordionContent>
-                We're developing the app for both iOS and Android devices. It
-                will be available on smartphones and tablets.
+                We&apos;re developing the app for both iOS and Android devices.
+                It will be available on smartphones and tablets.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

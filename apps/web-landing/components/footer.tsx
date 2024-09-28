@@ -19,7 +19,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/golf-tech" className="hover:underline">
+                <Link href="/blog/golf-technology" className="hover:underline">
                   Golf Technology
                 </Link>
               </li>

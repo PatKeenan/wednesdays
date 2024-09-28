@@ -15,7 +15,7 @@ export const CareersScreen = () => {
                 Join Our Team
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                Be part of the revolution in social golfing. We're always
+                Be part of the revolution in social golfing. We&apos;re always
                 looking for passionate individuals to join our team.
               </p>
             </div>
@@ -31,9 +31,9 @@ export const CareersScreen = () => {
               No Current Openings
             </h2>
             <p className="text-xl text-gray-500 mb-8">
-              We're not currently hiring, but we're always on the lookout for
-              talented individuals. Please check back closer to our launch in
-              Spring 2025 for exciting opportunities!
+              We&apos;re not currently hiring, but we&apos;re always on the
+              lookout for talented individuals. Please check back closer to our
+              launch in Spring 2025 for exciting opportunities!
             </p>
             <div className="flex justify-center space-x-4">
               {/*  <Button asChild>
