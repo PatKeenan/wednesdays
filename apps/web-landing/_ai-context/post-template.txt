@@ -1,8 +1,8 @@
 ---
 title: <Title Goes Here>
 excerpt: <Excerpt goes Here>
-description: <Description goes Here>
-keywords: <Keywords goes Here. No more than 10, comma separated>
+description: <Description goes Here and is used for seo so keep it short>
+keywords: <Keywords goes Here for seo. No more than 10, comma separated>
 coverImage: <Placeholder>
 date: <Date Goes Here. example format = 2024-09-28T21:14:19.543Z>
 category: <Category Goes Here. Categories are - fun-golf-games, golf-technology, golf-tips, social-golfing>
