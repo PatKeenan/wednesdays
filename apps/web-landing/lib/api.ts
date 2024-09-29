@@ -50,6 +50,10 @@ export async function getAllPosts(): Promise<Post[]> {
 }
 
 export async function getPostsForCategory(category: string): Promise<Post[]> {
+  const exists = fs.existsSync(join(postsDirectory, category));
+  if (!exists) {
+    return [];
+  }
   const slugs = await getPostCategorySlugs(category);
   const posts = await Promise.all(
     slugs.map((slug) => getPostBySlug(slug, category))
