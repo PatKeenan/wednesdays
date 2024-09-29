@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Wednesdays Golf App: Blog",
   description:
     "Your source for golf tips, technology insights, fun games, and social golfing ideas.",

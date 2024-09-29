@@ -93,17 +93,29 @@ export const Subscribe = ({
           </p>
         </div>
         <div className="w-full max-w-sm space-y-2">
-          <form className="flex space-x-2" onSubmit={handleSubmit}>
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <Button type="submit">{buttonText}</Button>
-          </form>
+          {success ? (
+            <p className="text-green-500">
+              Thank you for joining the waiting list! We&apos;ll notify you when
+              the app is ready.
+            </p>
+          ) : (
+            <>
+              <form className="flex space-x-2" onSubmit={handleSubmit}>
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading ? "Loading..." : buttonText}
+                </Button>
+              </form>
+              {error && <p className="text-red-500">{error}</p>}
+            </>
+          )}
         </div>
       </div>
     </div>
