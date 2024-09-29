@@ -40,7 +40,9 @@ export function Header() {
           >
             Blog
           </Link>
-          <Button>Join Waiting List</Button>
+          <Button asChild>
+            <Link href="#subscribe">Join Waiting List</Link>
+          </Button>
         </nav>
         <div className="sm:hidden ml-auto">
           <Sheet>
