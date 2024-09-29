@@ -30,7 +30,9 @@ export function LandingScreen() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button size="lg">Join the Waiting List</Button>
+              <Button size="lg" asChild>
+                <Link href="#subscribe">Join the Waiting List</Link>
+              </Button>
             </div>
           </div>
         </div>
