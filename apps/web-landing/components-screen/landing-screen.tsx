@@ -112,12 +112,13 @@ export function LandingScreen() {
                   Enjoy unique challenges on every hole, keeping your rounds
                   fresh and exciting.
                 </p>
-                <Link
-                  href="/features/mini-games"
-                  className="text-green-500 hover:underline mt-2 inline-block"
+                <Button
+                  asChild
+                  variant="link"
+                  className="mt-2 inline-block text-base"
                 >
-                  Learn More
-                </Link>
+                  <Link href="/features/mini-games">Learn More</Link>
+                </Button>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -128,12 +129,13 @@ export function LandingScreen() {
                   Compete with friends and track your progress with live,
                   updating leaderboards.
                 </p>
-                <Link
-                  href="/features/leaderboards"
-                  className="text-green-500 hover:underline mt-2 inline-block"
+                <Button
+                  asChild
+                  variant="link"
+                  className="mt-2 inline-block text-base"
                 >
-                  Learn More
-                </Link>
+                  <Link href="/features/leaderboards">Learn More</Link>
+                </Button>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -144,12 +146,13 @@ export function LandingScreen() {
                   Connect with other golfers, join groups, and organize events
                   easily.
                 </p>
-                <Link
-                  href="/features/social"
-                  className="text-green-500 hover:underline mt-2 inline-block"
+                <Button
+                  asChild
+                  variant="link"
+                  className="mt-2 inline-block text-base"
                 >
-                  Learn More
-                </Link>
+                  <Link href="/features/social">Learn More</Link>
+                </Button>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -160,12 +163,13 @@ export function LandingScreen() {
                   Seamlessly book tee times at participating courses directly
                   through the app.
                 </p>
-                <Link
-                  href="/features/club-houses"
-                  className="text-green-500 hover:underline mt-2 inline-block"
+                <Button
+                  asChild
+                  variant="link"
+                  className="mt-2 inline-block text-base"
                 >
-                  Learn More
-                </Link>
+                  <Link href="/features/tee-time-booking">Learn More</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -245,12 +249,9 @@ export function LandingScreen() {
               <p className="text-gray-500">
                 Discover exciting new ways to enjoy your time on the course.
               </p>
-              <Link
-                href="/blog/fun-golf-games"
-                className="text-green-500 hover:underline"
-              >
-                Read More
-              </Link>
+              <Button asChild variant="link">
+                <Link href="/blog/fun-golf-games">Read More</Link>
+              </Button>
             </div>
             <div className="space-y-4">
               <Image
@@ -266,12 +267,9 @@ export function LandingScreen() {
               <p className="text-gray-500">
                 How technology is bringing golfers together like never before.
               </p>
-              <Link
-                href="/blog/social-golfing"
-                className="text-green-500 hover:underline"
-              >
-                Read More
-              </Link>
+              <Button asChild variant="link">
+                <Link href="/blog/social-golfing">Read More</Link>
+              </Button>
             </div>
             <div className="space-y-4">
               <Image
@@ -288,12 +286,9 @@ export function LandingScreen() {
                 A look at the innovative technologies shaping the future of
                 golf.
               </p>
-              <Link
-                href="/blog/golf-tech-trends"
-                className="text-green-500 hover:underline"
-              >
-                Read More
-              </Link>
+              <Button asChild variant="link">
+                <Link href="/blog/golf-tech-trends">Read More</Link>
+              </Button>
             </div>
           </div>
         </div>

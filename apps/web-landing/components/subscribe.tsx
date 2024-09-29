@@ -8,7 +8,17 @@ const schema = z.object({
   email: z.string().email(),
 });
 
-export const Subscribe = () => {
+interface SubscribeProps {
+  heading?: string;
+  description?: string;
+  buttonText?: string;
+}
+
+export const Subscribe = ({
+  heading = "Stay in the Loop",
+  description = "Subscribe to our newsletter for exclusive content and early access opportunities.",
+  buttonText = "Subscribe",
+}: SubscribeProps) => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -66,11 +76,10 @@ export const Subscribe = () => {
       <div className="flex flex-col items-center space-y-4 text-center">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Stay in the Loop
+            {heading}
           </h2>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-            Subscribe to our newsletter for exclusive content and early access
-            opportunities.
+            {description}
           </p>
         </div>
         <div className="w-full max-w-sm space-y-2">
@@ -83,7 +92,7 @@ export const Subscribe = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <Button type="submit">Subscribe</Button>
+            <Button type="submit">{buttonText}</Button>
           </form>
         </div>
       </div>

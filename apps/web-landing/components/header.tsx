@@ -23,19 +23,19 @@ export function Header() {
         </Link>
         <nav className="ml-auto items-center space-x-4 sm:flex hidden">
           <Link
-            href="#features"
+            href="/#features"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Features
           </Link>
           <Link
-            href="#faq"
+            href="/#faq"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             FAQ
           </Link>
           <Link
-            href="#blog"
+            href="/#blog"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Blog
@@ -53,19 +53,19 @@ export function Header() {
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4">
                 <Link
-                  href="#features"
+                  href="/#features"
                   className="text-sm font-medium hover:underline underline-offset-4"
                 >
                   Features
                 </Link>
                 <Link
-                  href="#faq"
+                  href="/#faq"
                   className="text-sm font-medium hover:underline underline-offset-4"
                 >
                   FAQ
                 </Link>
                 <Link
-                  href="#blog"
+                  href="/#blog"
                   className="text-sm font-medium hover:underline underline-offset-4"
                 >
                   Blog
