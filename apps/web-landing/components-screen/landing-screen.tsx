@@ -176,7 +176,7 @@ export function LandingScreen() {
         </div>
       </Section>
       <Section className="bg-green-100">
-        å <CountDown />
+        <CountDown />
       </Section>
       <Section id="faq">
         <div className="container px-4 md:px-6">
@@ -287,7 +287,7 @@ export function LandingScreen() {
                 golf.
               </p>
               <Button asChild variant="link">
-                <Link href="/blog/golf-tech-trends">Read More</Link>
+                <Link href="/blog/golf-technology">Read More</Link>
               </Button>
             </div>
           </div>

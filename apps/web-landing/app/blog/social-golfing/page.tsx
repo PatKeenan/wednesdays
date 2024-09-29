@@ -1,3 +1,4 @@
+import { BlogCategory } from "@/components/blog-category";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,4 +9,6 @@ export const metadata: Metadata = {
     url: "https://www.wednesdays-golf.com/blog/social-golfing",
   },
 };
-export { SocialGolfingScreen as default } from "@/components-screen/social-golfing-screen";
+export default function SocialGolfingScreen() {
+  return <BlogCategory category="social-golfing" />;
+}

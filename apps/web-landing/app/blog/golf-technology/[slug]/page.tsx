@@ -1,4 +1,7 @@
-import { BlogDetailPage } from "@/components-screen/blog-detail-page";
+import {
+  type BlogCategories,
+  BlogDetailPage,
+} from "@/components-screen/blog-detail-page";
 import { getPostBySlug, getPostsForCategory } from "@/lib/api";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -9,10 +12,10 @@ type Params = {
   };
 };
 
-const category = "fun-golf-games";
+const category: BlogCategories = "golf-technology";
 
-export default function FunGolfGamesDetailPage({ params }: Params) {
-  return <BlogDetailPage slug={params.slug} category="fun-golf-games" />;
+export default function GolfTechnologyDetailPage({ params }: Params) {
+  return <BlogDetailPage slug={params.slug} category={category} />;
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {

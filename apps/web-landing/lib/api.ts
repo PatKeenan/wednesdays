@@ -49,7 +49,9 @@ export async function getAllPosts(): Promise<Post[]> {
   return flatPosts;
 }
 
-export async function getPostsForCategory(category: string): Promise<Post[]> {
+export async function getPostsForCategory(
+  category: string
+): Promise<Post[] | null> {
   const slugs = await getPostCategorySlugs(category);
   const posts = await Promise.all(
     slugs.map((slug) => getPostBySlug(slug, category))
