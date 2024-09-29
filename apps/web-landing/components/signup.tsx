@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import grass from "@/public/grass.jpg";
-import { Section } from "./Section";
+import { Section } from "./section";
 
 export const Signup = () => {
   const [email, setEmail] = useState<string>("");
@@ -23,6 +23,16 @@ export const Signup = () => {
     setError("");
     setLoading(false);
   };
+
+  if (success) {
+    console.log("success");
+  }
+  if (error) {
+    console.log("error", error);
+  }
+  if (loading) {
+    console.log("isLoading");
+  }
   return (
     <Section
       id="signup"

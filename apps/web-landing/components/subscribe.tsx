@@ -24,6 +24,16 @@ export const Subscribe = ({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  if (success) {
+    console.log("success");
+  }
+  if (error) {
+    console.log("error", error);
+  }
+  if (isLoading) {
+    console.log("isLoading");
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 

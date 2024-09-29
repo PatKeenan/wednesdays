@@ -11,7 +11,7 @@ export const CountDown = () => {
       setTimeLeft(getTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  });
 
   function getTimeLeft() {
     const difference = +launchDate - +new Date();
