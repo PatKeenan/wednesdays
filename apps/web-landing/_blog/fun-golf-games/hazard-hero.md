@@ -1,6 +1,6 @@
 ---
 title: Hazard Hero
-excerpt: Discover Hazard Hero, the golf game that turns course hazards into opportunities. Play it first on the Wednesdays Golf App, launching fall 2025. Join the waitlist now!
+excerpt: Discover Hazard Hero, the golf game that turns course hazards into opportunities. Play it first on the Wednesdays Golf App, launching spring 2025. Join the waitlist now!
 description: Discover Hazard Hero, the golf game that turns course hazards into opportunities.
 keywords: fun golf games, golf challenges, Wednesdays Golf App, golf course hazards, innovative golf games, golf app features, social golfing, casual golf games
 coverImage: /blog-images/hazard-hero-cover.jpg
@@ -10,7 +10,7 @@ category: fun-golf-games
 
 # Hazard Hero: The Golf Game That Turns Obstacles into Opportunities
 
-Are you tired of fearing hazards on the golf course? Get ready to embrace them with Hazard Hero, an exciting new golf game that will transform the way you see sand traps, water hazards, and even cart paths. This innovative game is set to be a standout feature in the upcoming Wednesdays Golf App, launching in fall 2025. Let's dive into how Hazard Hero works and why it's about to become your new favorite way to play.
+Are you tired of fearing hazards on the golf course? Get ready to embrace them with Hazard Hero, an exciting new golf game that will transform the way you see sand traps, water hazards, and even cart paths. This innovative game is set to be a standout feature in the upcoming Wednesdays Golf App, launching in spring 2025. Let's dive into how Hazard Hero works and why it's about to become your new favorite way to play.
 
 ## How to Play Hazard Hero
 
@@ -57,4 +57,4 @@ Don't miss out on being among the first to experience Hazard Hero and other exci
 
 [Sign Up for the Wednesdays Golf App Waiting List](#subscribe)
 
-Remember, great golfers don't fear hazards – they conquer them. With Hazard Hero and the Wednesdays Golf App, you'll be well on your way to becoming a true master of the course. Stay tuned for more updates on exciting games and features coming your way in fall 2025!
+Remember, great golfers don't fear hazards – they conquer them. With Hazard Hero and the Wednesdays Golf App, you'll be well on your way to becoming a true master of the course. Stay tuned for more updates on exciting games and features coming your way in spring 2025!

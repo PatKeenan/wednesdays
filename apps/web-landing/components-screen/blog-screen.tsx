@@ -65,6 +65,8 @@ const categories: Category[] = [
 export const BlogScreen = async () => {
   const featuredPosts = await Promise.all([
     getPostBySlug("hazard-hero", "fun-golf-games"),
+    getPostBySlug("5-easy-golf-tips", "golf-tips"),
+    getPostBySlug("the-future-of-social-golfing", "social-golfing"),
   ]);
 
   return (
