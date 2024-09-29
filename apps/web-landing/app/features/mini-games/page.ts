@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Enhance your golf game with our dynamic mini-games. Practice and play with our targeted mini-games.",
   keywords: "golf, mini-games, practice, play, wednesdays, app",
   openGraph: {
-    url: "https://www.wednesdays-golf.com/features/mini-games",
+    url: "https://www.wednesday-golf.com/features/mini-games",
   },
 };
 export { MiniGamesScreen as default } from "@/components-screen/mini-games-screen";

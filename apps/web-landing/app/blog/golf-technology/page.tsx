@@ -7,9 +7,14 @@ export const metadata: Metadata = {
     "Explore the latest golf technology and how it's changing the game.",
   keywords: "golf, technology, wednesdays, app",
   openGraph: {
-    url: "https://www.wednesdays-golf.com/blog/golf-technology",
+    url: "https://www.wednesday-golf.com/blog/golf-technology",
   },
 };
 export default function SocialGolfingScreen() {
-  return <BlogCategory category="golf-technology" />;
+  return (
+    <BlogCategory
+      category="golf-technology"
+      subTitle="Explore the latest golf technology and how it's changing the game."
+    />
+  );
 }

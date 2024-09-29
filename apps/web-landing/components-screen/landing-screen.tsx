@@ -235,31 +235,31 @@ export function LandingScreen() {
             Latest from Our Blog
           </h2>
           <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-            <div className="space-y-4">
+            <div className="space-y-1 lg:space-y-2">
               <Image
-                src="https://images.unsplash.com/photo-1595789927828-b56b8a608bc0?q=80&w=3433&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/blog-images/category/fun-golf-games.jpg"
                 alt="Fun Golf Games"
                 width={400}
                 height={225}
-                className="rounded-lg aspect-video"
+                className="w-full h-48 lg:h-56 object-cover rounded-lg"
               />
               <h3 className="text-xl font-bold">
-                5 Fun Mini-Games to Spice Up Your Golf Round
+                Fun Mini-Games to Spice Up Your Golf Round
               </h3>
               <p className="text-gray-500">
                 Discover exciting new ways to enjoy your time on the course.
               </p>
               <Button asChild variant="link">
-                <Link href="/blog/fun-golf-games">Read More</Link>
+                <Link href="/blog/fun-golf-games">Explore Fun Golf Games</Link>
               </Button>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-1 lg:space-y-2">
               <Image
-                src="https://images.unsplash.com/photo-1561251224-e393160cd769?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/blog-images/category/social-golfing.jpg"
                 alt="Social Golfing"
                 width={400}
                 height={225}
-                className="rounded-lg aspect-video object-cover"
+                className="w-full h-48 lg:h-56 object-cover rounded-lg"
               />
               <h3 className="text-xl font-bold">
                 The Rise of Social Golfing: Connecting Through the Game
@@ -268,16 +268,16 @@ export function LandingScreen() {
                 How technology is bringing golfers together like never before.
               </p>
               <Button asChild variant="link">
-                <Link href="/blog/social-golfing">Read More</Link>
+                <Link href="/blog/social-golfing">Explore Social Golfing</Link>
               </Button>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-1 lg:space-y-2">
               <Image
-                src="https://images.unsplash.com/photo-1640907537101-36b3dec4db41?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/blog-images/category/golf-technology.jpg"
                 alt="Golf Technology"
                 width={400}
                 height={225}
-                className="rounded-lg aspect-video object-cover"
+                className="w-full h-48 lg:h-56 object-cover rounded-lg"
               />
               <h3 className="text-xl font-bold">
                 Golf Tech Trends: What to Expect in 2025
@@ -287,7 +287,9 @@ export function LandingScreen() {
                 golf.
               </p>
               <Button asChild variant="link">
-                <Link href="/blog/golf-technology">Read More</Link>
+                <Link href="/blog/golf-technology">
+                  Explore Golf Technology
+                </Link>
               </Button>
             </div>
           </div>

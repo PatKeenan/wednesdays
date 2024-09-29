@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title,
     openGraph: {
       title,
-      url: `https://www.wednesdays-golf.com/blog/${category}/${post.slug}`,
+      url: `https://www.wednesday-golf.com/blog/${category}/${post.slug}`,
     },
   };
 }

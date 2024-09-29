@@ -35,7 +35,7 @@ export function Header() {
             FAQ
           </Link>
           <Link
-            href="/#blog"
+            href="/blog"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Blog
@@ -65,7 +65,7 @@ export function Header() {
                   FAQ
                 </Link>
                 <Link
-                  href="/#blog"
+                  href="/blog"
                   className="text-sm font-medium hover:underline underline-offset-4"
                 >
                   Blog

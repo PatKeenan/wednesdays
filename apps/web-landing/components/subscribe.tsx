@@ -15,9 +15,9 @@ interface SubscribeProps {
 }
 
 export const Subscribe = ({
-  heading = "Stay in the Loop",
-  description = "Subscribe to our newsletter for exclusive content and early access opportunities.",
-  buttonText = "Subscribe",
+  heading = "Get notified when we launch",
+  description = "Be the first to know when we launch the Wednesdays Golf App",
+  buttonText = "Join Waiting List",
 }: SubscribeProps) => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);

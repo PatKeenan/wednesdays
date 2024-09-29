@@ -1,9 +1,11 @@
 ---
 title: Hazard Hero
 excerpt: Discover Hazard Hero, the golf game that turns course hazards into opportunities. Play it first on the Wednesdays Golf App, launching fall 2025. Join the waitlist now!
-description: Discover Hazard Hero, the golf game that turns course hazards into opportunities. Play it first on the Wednesdays Golf App, launching fall 2025. Join the waitlist now!
-coverImage: https://images.unsplash.com/photo-1601479693683-d4d129e528eb?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+description: Discover Hazard Hero, the golf game that turns course hazards into opportunities.
+keywords: fun golf games, golf challenges, Wednesdays Golf App, golf course hazards, innovative golf games, golf app features, social golfing, casual golf games
+coverImage: /blog-images/hazard-hero-cover.jpg
 date: 2024-09-28T21:14:19.543Z
+category: fun-golf-games
 ---
 
 # Hazard Hero: The Golf Game That Turns Obstacles into Opportunities

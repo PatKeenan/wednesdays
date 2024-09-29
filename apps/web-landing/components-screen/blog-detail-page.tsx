@@ -5,7 +5,6 @@ import React from "react";
 import { PostBody } from "@/components/post-body";
 import { Section } from "@/components/section";
 import { Subscribe } from "@/components/subscribe";
-import Head from "next/head";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -40,12 +39,8 @@ export const BlogDetailPage = async ({
 
   return (
     <>
-      <Head>
-        <link rel="preload" href={post.coverImage} as="image" />
-      </Head>
-      <section className="w-full pt-6 md:pt-8 pb-6 md:pb-12 lg:pb-18 xl:pb-22 container">
-        {/* Breadcrumbs */}
-        <Breadcrumb className="max-w-4xl mx-auto px-4 pb-4">
+      <div className="py-4 container px-4 md:px-6 max-w-4xl">
+        <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -72,11 +67,16 @@ export const BlogDetailPage = async ({
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <PostBody
-          content={content}
-          coverImage={post.coverImage}
-          publishedOn={new Date(post.date).toLocaleDateString()}
-        />
+      </div>
+      <section className="pb-12 md:pb-24 lg:pb-32  px-4 md:px-6">
+        <div className="container max-w-4xl">
+          {/* Breadcrumbs */}
+          <PostBody
+            content={content}
+            coverImage={post.coverImage}
+            publishedOn={new Date(post.date).toLocaleDateString()}
+          />
+        </div>
       </section>
       <Section className="bg-green-100">
         <Subscribe />

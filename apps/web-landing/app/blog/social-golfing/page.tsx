@@ -6,9 +6,14 @@ export const metadata: Metadata = {
   description: "Connect with friends and play golf together.",
   keywords: "golf, social, wednesdays, app",
   openGraph: {
-    url: "https://www.wednesdays-golf.com/blog/social-golfing",
+    url: "https://www.wednesday-golf.com/blog/social-golfing",
   },
 };
 export default function SocialGolfingScreen() {
-  return <BlogCategory category="social-golfing" />;
+  return (
+    <BlogCategory
+      category="social-golfing"
+      subTitle="Connect with friends and play golf together."
+    />
+  );
 }

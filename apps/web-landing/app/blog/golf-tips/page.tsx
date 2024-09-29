@@ -6,9 +6,14 @@ export const metadata: Metadata = {
   description: "Improve your golf game with our expert tips.",
   keywords: "golf, tips, wednesdays, app",
   openGraph: {
-    url: "https://www.wednesdays-golf.com/blog/golf-tips",
+    url: "https://www.wednesday-golf.com/blog/golf-tips",
   },
 };
 export default function GolfTipsScreen() {
-  return <BlogCategory category="golf-tips" />;
+  return (
+    <BlogCategory
+      category="golf-tips"
+      subTitle="Improve your golf game with our expert tips."
+    />
+  );
 }

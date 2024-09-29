@@ -9,7 +9,7 @@ type Props = {
 
 export function PostBody({ content, coverImage, publishedOn }: Props) {
   return (
-    <div className="max-w-4xl container px-4">
+    <div>
       <div className="relative rounded-lg overflow-hidden">
         <Image
           src={coverImage}

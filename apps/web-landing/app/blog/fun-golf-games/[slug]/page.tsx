@@ -26,9 +26,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title,
+    description: post.excerpt,
+    keywords: post.keywords,
     openGraph: {
       title,
-      url: `https://www.wednesdays-golf.com/blog/${category}/${post.slug}`,
+      authors: ["Wednesdays Golf"],
+      description: post.excerpt,
+      images: [post.coverImage],
+      url: `https://www.wednesday-golf.com/blog/${category}/${post.slug}`,
     },
   };
 }
