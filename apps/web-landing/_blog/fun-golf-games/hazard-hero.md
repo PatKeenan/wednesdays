@@ -58,3 +58,7 @@ Don't miss out on being among the first to experience Hazard Hero and other exci
 [Sign Up for the Wednesdays Golf App Waiting List](#subscribe)
 
 Remember, great golfers don't fear hazards – they conquer them. With Hazard Hero and the Wednesdays Golf App, you'll be well on your way to becoming a true master of the course. Stay tuned for more updates on exciting games and features coming your way in spring 2025!
+
+**Like this article? Check out another:**
+
+- [Rando Scrambo](/blog/fun-golf-games/rando-scrambo)

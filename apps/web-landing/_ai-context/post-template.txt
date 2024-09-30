@@ -1,11 +1,17 @@
 ---
-title: <Title Goes Here>
-excerpt: <Excerpt goes Here>
-description: <Description goes Here and is used for seo so keep it short>
+title: <Title Goes Here, no semicolon>
+excerpt: <Excerpt goes Here, no semicolon>
+description: <Description goes Here and is used for seo so keep it short, no semicolons>
 keywords: <Keywords goes Here for seo. No more than 10, comma separated>
 coverImage: <Placeholder>
 date: <Date Goes Here. example format = 2024-09-28T21:14:19.543Z>
 category: <Category Goes Here. Categories are - fun-golf-games, golf-technology, golf-tips, social-golfing>
 ---
 
+# <Post Title>
+
 <Post Content Goes Here>
+
+**Like this article? Check out another:**
+
+- [<Link to another post>](<Post title>)
