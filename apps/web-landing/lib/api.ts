@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import { join } from "path";
 
 import type { Post } from "@/interfaces/posts";
+import { notFound } from "next/navigation";
 
 const postsDirectory = join(process.cwd(), "_blog");
 
@@ -23,6 +24,13 @@ export async function getPostBySlug(
   category: string
 ): Promise<Post> {
   const realSlug = slug.replace(/\.md$/, "");
+  const exists = fs.existsSync(
+    join(postsDirectory, category, `${realSlug}.md`)
+  );
+  if (!exists) {
+    return notFound();
+  }
+
   const file = fs.readFileSync(
     join(postsDirectory, category, `${realSlug}.md`),
     "utf8"
