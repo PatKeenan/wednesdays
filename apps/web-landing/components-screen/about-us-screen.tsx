@@ -161,7 +161,7 @@ export const AboutUsScreen = () => {
                 className="rounded-full mb-4"
               />
               <h3 className="text-xl font-bold">Alex Fox</h3>
-              <p className="text-gray-500">Co-Founder & CEO</p>
+              <p className="text-gray-500">Co-Founder</p>
             </div>
             <div className="flex flex-col items-center text-center md:col-start-3 md:col-end-4">
               <Image
@@ -172,7 +172,7 @@ export const AboutUsScreen = () => {
                 className="rounded-full mb-4"
               />
               <h3 className="text-xl font-bold">Pat Keenan</h3>
-              <p className="text-gray-500">Co-Founder & CTO</p>
+              <p className="text-gray-500">Co-Founder</p>
             </div>
             {/* <div className="flex flex-col items-center text-center">
               <Image
