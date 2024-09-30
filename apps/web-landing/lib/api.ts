@@ -51,9 +51,11 @@ export async function getAllPosts(): Promise<Post[]> {
       return posts;
     })
   );
-  const flatPosts = allPosts
-    .flat()
-    .sort((a, b) => a.date.localeCompare(b.date));
+  const flatPosts = allPosts.flat().sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
   return flatPosts;
 }
 
@@ -66,5 +68,9 @@ export async function getPostsForCategory(category: string): Promise<Post[]> {
   const posts = await Promise.all(
     slugs.map((slug) => getPostBySlug(slug, category))
   );
-  return posts.sort((a, b) => a.date.localeCompare(b.date));
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
 }
