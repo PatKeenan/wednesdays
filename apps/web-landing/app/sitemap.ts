@@ -40,6 +40,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.2,
     },
     {
+      url: "https://www.wednesday-golf.com/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: "https://www.wednesday-golf.com/blog",
       lastModified: new Date(),
       changeFrequency: "weekly",
