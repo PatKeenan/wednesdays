@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   keywords: "golf, leaderboards, competition, wednesdays, app",
   openGraph: {
     url: "https://www.wednesday-golf.com/features/leaderboards",
+    description:
+      "Experience the thrill of live competition with our dynamic, real-time leaderboards.",
   },
 };
 export { LeaderboardsScreen as default } from "@/components-screen/leaderboards-screen";

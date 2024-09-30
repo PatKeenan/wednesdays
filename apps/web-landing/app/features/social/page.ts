@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   keywords: "golf, social, connect, compete, wednesdays, app",
   openGraph: {
     url: "https://www.wednesday-golf.com/features/social",
+    description:
+      "Connect with fellow golfers, plan your next round, and take your golfing experience to the next level with Wednesdays Golf App.",
   },
 };
 
