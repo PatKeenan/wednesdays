@@ -39,7 +39,7 @@ export const BlogDetailPage = async ({
 
   return (
     <>
-      <div className="py-4 container px-4 md:px-6 max-w-4xl">
+      <div className="py-4 container px-4 md:px-6 lg:px-0 max-w-4xl">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -68,7 +68,7 @@ export const BlogDetailPage = async ({
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <section className="pb-12 md:pb-24 lg:pb-32  px-4 md:px-6">
+      <section className="pb-12 md:pb-24 lg:pb-32 px-4 md:px-6">
         <div className="container max-w-4xl">
           {/* Breadcrumbs */}
           <PostBody
