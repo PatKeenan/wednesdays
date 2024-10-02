@@ -1,6 +1,10 @@
 {
   "name": "transactional",
   "private": true,
+  "type": "module",
+  "exports": {
+    "import": "./src/confirm-waitlist.tsx"
+  },
   "files": [
     "./src/confirm-waitlist.tsx"
   ],

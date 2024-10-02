@@ -4,6 +4,10 @@ import { z } from "zod";
 import { v4 as uuidv4 } from "uuid";
 import { NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
+import { ConfirmWaitlistEmailTemplate } from "transactional";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const emailSchema = z.object({
   email: z.string().email(),
@@ -19,8 +23,6 @@ export async function POST(req: Request) {
     .select()
     .from(contact)
     .where(eq(contact.email, data.email));
-
-  console.log({ existingContact });
 
   if (existingContact.length > 0) {
     return NextResponse.json({
@@ -41,6 +43,18 @@ export async function POST(req: Request) {
     return NextResponse.json({
       error: isValid.error.errors[0].message,
     });
+  } else {
+    const { error } = await resend.emails.send({
+      from: "Wednesdays@wednesday-golf.com",
+      to: data.email,
+      subject: "You're on the waiting list!!",
+      react: ConfirmWaitlistEmailTemplate(),
+    });
+
+    if (error) {
+      return NextResponse.json({ error });
+    }
   }
+
   return NextResponse.json({ success: true });
 }

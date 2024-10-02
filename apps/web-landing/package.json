@@ -28,11 +28,12 @@
     "react-dom": "catalog:",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "resend": "^4.0.0",
     "tailwind-merge": "catalog:",
     "tailwindcss-animate": "catalog:",
+    "transactional": "workspace:*",
     "uuid": "^10.0.0",
-    "zod": "^3.23.8",
-    "transactional": "workspace:*"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "catalog:",
