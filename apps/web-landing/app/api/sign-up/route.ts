@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     });
   } else {
     const { error } = await resend.emails.send({
-      from: "Wednesdays@wednesday-golf.com",
+      from: "Wednesdays Golf App <wednesdays@wednesday-golf.com>",
       to: data.email,
       subject: "You're on the waiting list!!",
       react: ConfirmWaitlistEmailTemplate(),
