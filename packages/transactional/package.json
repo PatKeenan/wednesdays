@@ -1,0 +1,19 @@
+{
+  "name": "transactional",
+  "private": true,
+  "files": [
+    "./src/confirm-waitlist.tsx"
+  ],
+  "scripts": {
+    "dev": "email dev --dir ./src"
+  },
+  "devDependencies": {
+    "react-email": "3.0.1",
+    "typescript": "catalog:",
+    "tsconfigs": "workspace:*",
+    "project-tailwind": "workspace:*"
+  },
+  "dependencies": {
+    "@react-email/components": "0.0.25"
+  }
+}

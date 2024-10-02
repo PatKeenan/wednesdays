@@ -5,7 +5,8 @@
   "type": "module",
   "files": [
     "./base-theme.css",
-    "./base-config.ts"
+    "./base-config.ts",
+    "./with-actual-values.ts"
   ],
   "scripts": {
     "build": "tsc",
