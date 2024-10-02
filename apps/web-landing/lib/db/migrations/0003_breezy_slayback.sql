@@ -1,0 +1,1 @@
+ALTER TABLE "contact" ADD COLUMN "from_contact_page" boolean DEFAULT false;

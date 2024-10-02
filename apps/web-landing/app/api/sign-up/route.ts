@@ -18,6 +18,12 @@ export async function POST(req: Request) {
   const data = await req.json();
   const isValid = emailSchema.safeParse(data);
 
+  if (!isValid.success) {
+    return NextResponse.json({
+      error: isValid.error.errors[0].message,
+    });
+  }
+
   // First check if the email is already in the database
   const existingContact = await db
     .select()
@@ -39,21 +45,15 @@ export async function POST(req: Request) {
     })
     .returning();
 
-  if (!isValid.success) {
-    return NextResponse.json({
-      error: isValid.error.errors[0].message,
-    });
-  } else {
-    const { error } = await resend.emails.send({
-      from: "Wednesdays Golf App <wednesdays@wednesday-golf.com>",
-      to: data.email,
-      subject: "You're on the waiting list!!",
-      react: ConfirmWaitlistEmailTemplate(),
-    });
+  const { error } = await resend.emails.send({
+    from: "Wednesdays Golf App <wednesdays@wednesday-golf.com>",
+    to: data.email,
+    subject: "You're on the waiting list!!",
+    react: ConfirmWaitlistEmailTemplate(),
+  });
 
-    if (error) {
-      return NextResponse.json({ error });
-    }
+  if (error) {
+    return NextResponse.json({ error });
   }
 
   return NextResponse.json({ success: true });

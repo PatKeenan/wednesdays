@@ -4,22 +4,65 @@ import { Section } from "@/components/section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 import { Subscribe } from "@/components/subscribe";
+import { z } from "zod";
+
+const emailSchema = z.object({
+  email: z.string().email(),
+  name: z.string(),
+  subject: z.string(),
+  message: z.string(),
+});
 
 export const ContactScreen = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const [success, setSuccess] = React.useState<boolean>(false);
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Here you would typically handle the form submission
-    // For example, sending the data to an API
-    console.log("Form submitted");
+    const formData = new FormData(event.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
+    const isValid = emailSchema.safeParse(data);
+    const validData = isValid.success ? isValid.data : null;
+
+    if (!isValid.success) {
+      setError(isValid.error.errors[0].message);
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...validData }),
+      });
+      if (!response.ok) {
+        setError("Failed to send message");
+        setIsLoading(false);
+        setSuccess(false);
+        return;
+      }
+      const data = await response.json();
+
+      if (data && "error" in data) {
+        alert(data.error);
+        setIsLoading(false);
+        setSuccess(false);
+      } else {
+        setSuccess(true);
+        setError(null);
+      }
+    } catch (error) {
+      console.error(error);
+      setError("Failed to send message");
+      setSuccess(false);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <>
@@ -31,7 +74,7 @@ export const ContactScreen = () => {
                 Contact Us
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                We're here to help. Reach out to us with any questions or
+                We&apos;re here to help. Reach out to us with any questions or
                 feedback about Wednesdays Golf App.
               </p>
             </div>
@@ -46,11 +89,11 @@ export const ContactScreen = () => {
                 <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
                 <p className="text-gray-500">
                   Have a question or want to learn more about Wednesdays Golf
-                  App? Fill out the form and we'll get back to you as soon as
-                  possible.
+                  App? Fill out the form and we&apos;ll get back to you as soon
+                  as possible.
                 </p>
               </div>
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <MapPin className="text-green-500" />
                   <span>123 Golf Lane, Fairway City, GC 12345</span>
@@ -63,7 +106,7 @@ export const ContactScreen = () => {
                   <Mail className="text-green-500" />
                   <span>contact@wednesdaysgolf.com</span>
                 </div>
-              </div>
+              </div> */}
               <div className="space-y-4">
                 <h3 className="text-xl font-bold">Follow Us</h3>
                 <div className="flex space-x-4">
@@ -83,65 +126,81 @@ export const ContactScreen = () => {
               </div>
             </div>
             <div>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Name
-                  </label>
-                  <Input id="name" placeholder="Enter your name" required />
+              {success ? (
+                <div>
+                  <h2>Message sent successfully!</h2>
+                  <p>We&apos;ll get back to you as soon as possible.</p>
                 </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    placeholder="Enter the subject"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Enter your message"
-                    required
-                  />
-                </div>
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="name"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Subject
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      placeholder="Enter the subject"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message"
+                      required
+                    />
+                  </div>
+                  <Button type="submit" className="w-full" disabled={isLoading}>
+                    {isLoading ? "Sending..." : "Send Message"}
+                  </Button>
+                  {error && <p className="text-red-500">{error}</p>}
+                </form>
+              )}
             </div>
           </div>
         </div>
       </Section>
-      <Section className="bg-green-100">
+      <Section>
         <Subscribe />
       </Section>
     </>

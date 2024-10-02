@@ -5,6 +5,7 @@ import {
   pgTable,
   timestamp,
   varchar,
+  boolean,
 } from "drizzle-orm/pg-core";
 
 // Create a drizzle schema for the signup form on the landing page. It should have the following columns:
@@ -15,6 +16,10 @@ export const contact = pgTable("contact", {
   email: text("email").notNull(),
   signup_version: integer("signup_version").notNull().default(1),
   created_at: timestamp("created_at").default(sql`now()`),
+  contact_subject: text("contact_subject").default("General Inquiry"),
+  contact_message: text("contact_message"),
+  contact_name: text("contact_name"),
+  from_contact_page: boolean("from_contact_page").default(false),
 });
 
 export type Contact = typeof contact.$inferSelect;
