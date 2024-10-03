@@ -1,0 +1,52 @@
+Relevant Blog Posts
+Post 1:
+Title:  Hazard Hero 
+Description: Discover Hazard Hero, the golf game that turns course hazards into opportunities. 
+Category: fun-golf-games
+Link: /blog/fun-golf-games/hazard-hero
+
+Post 2: 
+Title:  Golf Poker
+Description: Combine your golfing skills with poker strategy for a thrilling new way to play.
+Category: fun-golf-games
+Link: /blog/fun-golf-games/golf-poker
+
+Post 3:
+Title:  Revolutionary Features in Wednesdays Golf App
+Description: Discover the game-changing features that will make Wednesdays Golf App the must-have golfing companion of 2025.
+Category: golf-technology
+Link: /blog/golf-technology/revolutionary-features
+
+Post 4:
+Title:  Breaking the Ice on the Green
+Description: Discover how the Wednesdays Golf App revolutionizes professional networking on the golf course. Learn to build meaningful business relationships while enjoying your favorite sport.
+Category: social-golfing
+Link: /blog/social-golfing/breaking-the-ice
+
+Post 5:
+Title:  The Future of Social Golfing
+Description: Discover how the Wednesdays Golf App is set to revolutionize social golfing in 2025, making it easier than ever to connect with fellow golf enthusiasts and organize unforgettable rounds.
+Category: social-golfing
+Link: /blog/social-golfing/the-future-of-social-golfing
+
+Post 6:
+Title:  Rando Scrambo
+Description: A new golf game that randomizes the traditional scramble format for more excitement and unpredictability.
+Category: fun-golf-games
+Link: /blog/fun-golf-games/rando-scrambo
+
+Post 7: 
+Title: Fun Foursome Golf Games
+Description: Discover three exciting golf games perfect for groups of four. These unique twists on traditional golf will add fun and challenge to your next outing.
+Category: fun-golf-games
+Link: /blog/fun-golf-games/fun-foursome-golf-games
+
+
+Other Relevant Pages
+
+1. Leaderboards: Experience the thrill of live competition with our dynamic, real-time leaderboards. URL= /features/leaderboards
+2. Mini-games: Enhance your golf game with our dynamic mini-games. Practice and play with our targeted mini-games. URL= /features/mini-games
+3. Social: Connect with fellow golfers, plan your next round, and take your golfing experience to the next level with Wednesdays Golf App. URL= /features/social
+4. Tee Time Booking: Book your tee time with ease using our Wednesdays Golf App. Find the perfect time and course for your next round. URL = /features/tee-time-booking
+
+Main Signup link = #subscribe
