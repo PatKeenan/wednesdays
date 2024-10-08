@@ -13,6 +13,10 @@
   @apply list-disc pl-4;
 }
 
+.markdown ol {
+  @apply list-decimal pl-4;
+}
+
 .markdown h1 {
   @apply text-4xl mt-10 mb-4 font-bold;
 }
